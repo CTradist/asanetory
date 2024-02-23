@@ -1,3 +1,0 @@
-- Hey, I'm @asanetory!
-- Not much to know about me, I created this account for tests :P
-- Thats about it! See you next time!
