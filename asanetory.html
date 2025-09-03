@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ASANETORY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(to top, #2e3064, #585b91);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Climate Crisis', sans-serif;
+      overflow: hidden;
+      cursor: url('hoversprite.png'), auto;
+    }
+
+    .container {
+      text-align: center;
+      color: #8689d4;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+      background: linear-gradient(to right, #57599d, #8689d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: bubble 6s infinite ease-in-out;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 6em;
+      background: linear-gradient(to right, #57599d, #8689d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: bubble 6s infinite ease-in-out;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 2.5em;
+      background: linear-gradient(to right, #57599d, #8689d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: bubble 6s infinite ease-in-out;
+    }
+
+    a:hover, button:hover, .interactive:hover {
+      cursor: url('clicksprite.png'), auto;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bubble {
+      0%   { transform: translate(0px, 0px); }
+      25%  { transform: translate(2px, -2px); }
+      50%  { transform: translate(-2px, 2px); }
+      75%  { transform: translate(2px, 2px); }
+      100% { transform: translate(0px, 0px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>WELCOME TO</h1>
+    <h2>asanetory</h2>
+    <h3>the project</h3>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const body = document.body;
+
+      body.addEventListener('mousedown', () => {
+        body.style.cursor = "url('clicksprite.png'), auto";
+      });
+
+      body.addEventListener('mouseup', () => {
+        body.style.cursor = "url('hoversprite.png'), auto";
+      });
+    });
+  </script>
+</body>
+</html>
